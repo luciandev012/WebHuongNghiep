@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .rounded {
+  border: 2px solid dodgerblue;
+  color: dodgerblue;
+  border-radius: 7px;
+  background-color: transparent;
+}
+
+.wrapper .header {
+  color: dodgerblue;
+  height: 20%;
+}
+
+.wrapper .content {
+  position: relative;
+  height: 60%;
+  font-size: 50px;
+}
+
+.wrapper .content #login {
+  border: 2px solid purple;
+  color: purple;
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  padding: 20px;
+  display: none;
+}
+
+.wrapper .content #login.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: slide-up 1.5s alternate ease;
+          animation: slide-up 1.5s alternate ease;
+}
+
+.wrapper .content #signup {
+  border: 2px solid green;
+  color: green;
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  padding: 20px;
+  opacity: 0;
+}
+
+.wrapper .content #signup.show {
+  opacity: 1;
+  -webkit-animation: slide-up 1.5s alternate ease;
+          animation: slide-up 1.5s alternate ease;
+}
+
+.wrapper .instruction {
+  height: 20%;
+}
+
+.wrapper .instruction button {
+  position: relative;
+  z-index: 999;
+  padding: 20px;
+  font-size: 20px;
+  color: dodgerblue;
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.wrapper .instruction button:hover {
+  background-color: dodgerblue;
+  color: #fff;
+}
+
+@-webkit-keyframes slide-up {
+  0% {
+    opacity: 0;
+    top: 300px;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  80% {
+    opacity: 1;
+    top: 0;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    top: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    top: 300px;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  80% {
+    opacity: 1;
+    top: 0;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    top: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=main.css.map */

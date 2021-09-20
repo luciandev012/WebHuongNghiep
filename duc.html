@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header flex">
+            <h1>Header</h1>
+        </div>
+        <div class="content flex">
+            <div id="login" class="flex rounded">
+                <h1>Login</h1>
+            </div>
+            <div id="signup" class="flex rounded">
+                <h1>Sign up</h1>
+            </div>
+        </div>
+        <div class="instruction flex">
+            <button id="toggle-btn" class="rounded">Play login form</button>
+        </div>
+    </div>
+    <script>
+        const toggleBtn = document.getElementById("toggle-btn"),
+            loginForm = document.getElementById("login"),
+            signupForm = document.getElementById("signup");
+        let isLoginForm = false;
+        toggleBtn.addEventListener("click", function () {
+            if (isLoginForm) {
+                loginForm.classList.remove("show");
+                signupForm.classList.add("show");
+                this.innerHTML = "Play Login Form";
+            } else {
+                loginForm.classList.add("show");
+                signupForm.classList.remove("show");
+                this.innerHTML = "Play Sign up Form";
+            }
+            isLoginForm = !isLoginForm;
+        });
+    </script>
+</body>
+
+</html>
